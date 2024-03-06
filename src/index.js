@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "./App.scss";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -21,6 +21,7 @@ import RestaurantPhotos from "./views/restaurants/restaurant-photos";
 import RestaurantWorkingHours from "./views/restaurants/restaurant-working-hours";
 import RestaurantAvis from "./views/restaurants/restaurant-avis";
 import RestaurantSeo from "./views/restaurants/restaurant-seo";
+import RestaurantsBase from "./views/restaurants/restaurants-base";
 
 const router = createBrowserRouter([
   {
@@ -33,32 +34,38 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "/r",
+        path: "/r/",
         element: <Restaurants />,
       },
       {
         path: "/r/:id",
-        element: <RestaurantGeneral />,
-      },
-      {
-        path: "/r/:id/menu",
-        element: <RestaurantMenu />,
-      },
-      {
-        path: "/r/:id/photos",
-        element: <RestaurantPhotos />,
-      },
-      {
-        path: "/r/:id/hours",
-        element: <RestaurantWorkingHours />,
-      },
-      {
-        path: "/r/:id/reviews",
-        element: <RestaurantAvis />,
-      },
-      {
-        path: "/r/:id/seo",
-        element: <RestaurantSeo />,
+        element: <RestaurantsBase />,
+        children: [
+          {
+            path: "/r/:id",
+            element: <RestaurantGeneral />,
+          },
+          {
+            path: "/r/:id/menu",
+            element: <RestaurantMenu />,
+          },
+          {
+            path: "/r/:id/photos",
+            element: <RestaurantPhotos />,
+          },
+          {
+            path: "/r/:id/hours",
+            element: <RestaurantWorkingHours />,
+          },
+          {
+            path: "/r/:id/reviews",
+            element: <RestaurantAvis />,
+          },
+          {
+            path: "/r/:id/seo",
+            element: <RestaurantSeo />,
+          },
+        ],
       },
 
       // {

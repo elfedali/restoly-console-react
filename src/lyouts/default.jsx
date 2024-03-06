@@ -13,8 +13,10 @@ export default function Root() {
                         <Aside />
                     </Col>
                     <Col>
-                        <Outlet />
-                        <div className="p-5"></div>
+                        <section className="p-4">
+                            <Outlet />
+                            <div className="p-5"></div>
+                        </section>
                     </Col>
                 </Row>
             </Container>

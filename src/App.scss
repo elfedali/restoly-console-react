@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+$font-family-sans-serif: "Manrope", sans-serif;
+$font-size-base: 0.9rem;
+// headline
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+$headings-font-weight: 500;
+
+$body-bg: #f8f9fa;
+$table-bg: #fff;
+@import "~bootstrap/scss/bootstrap";
+
 /* aside {
   background-color: #fff;
   padding: 20px;
@@ -46,8 +63,8 @@ aside nav ul li a + span {
   z-index: 1000;
   height: calc(100vh - 4rem);
   bottom: 0;
-  background-color: red;
 }
-:root {
-  --bs-body-bg: #f8f9fa;
-}
+// :root {
+//   --bs-body-bg: #f8f9fa;
+//   --bs-table-bg: #fff;
+// }

@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 export default function RestaurantNavMenu() {
     return (
-        <Nav>
-            <Nav.Item>
-                <Link className='nav-link ps-0 ' to="/r/1">
+        <Nav variant='underline' className='mb-3' defaultActiveKey='/r/1' as='ul' >
+            <Nav.Item >
+                <Link className='nav-link ps-0 ' to="/r/1" >
                     Général
                 </Link>
             </Nav.Item>

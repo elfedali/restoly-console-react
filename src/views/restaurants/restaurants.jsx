@@ -5,8 +5,8 @@ import { Col, Row } from 'react-bootstrap'
 export default function Restaurants() {
   return (
     <>
-      <h1>
-        Restaurants
+      <h1 className='h4 mb-4'>
+        Vous restaurants
       </h1>
 
       <Row>

@@ -7,10 +7,7 @@ import MenuList from '../../components/menu/menu-list'
 export default function RestaurantMenu() {
     return (
         <>
-            <h1>
-                Foodek Restaurant
-            </h1>
-            <RestaurantNavMenu />
+
             <Card className='bg-white mb-4'>
                 <Card.Body>
                     <NewMenuCategory />
