@@ -22,6 +22,8 @@ import RestaurantWorkingHours from "./views/restaurants/restaurant-working-hours
 import RestaurantAvis from "./views/restaurants/restaurant-avis";
 import RestaurantSeo from "./views/restaurants/restaurant-seo";
 import RestaurantsBase from "./views/restaurants/restaurants-base";
+import Login from "./views/auth/login/login";
+import Register from "./views/auth/register/register";
 
 const router = createBrowserRouter([
   {
@@ -87,17 +89,21 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/auth",
+    path: "/auth/",
     element: <Auth />,
     errorElement: <ErrorPage />,
     children: [
       {
+        path: "/auth/",
+        element: <Login />,
+      },
+      {
         path: "/auth/login",
-        element: <h1>login</h1>,
+        element: <Login />,
       },
       {
         path: "/auth/register",
-        element: <h1>register</h1>,
+        element: <Register />,
       },
     ],
   },

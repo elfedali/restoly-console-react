@@ -8,7 +8,10 @@ import { Link } from 'react-router-dom';
 export default function CardRestaurant() {
     return (
         <Card >
-            <Card.Img variant="top" src="https://images.pexels.com/photos/1581554/pexels-photo-1581554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+            <Link to="/r/1" title='Voir le restaurant'>
+
+                <Card.Img variant="top" src="https://images.pexels.com/photos/1581554/pexels-photo-1581554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+            </Link>
             <Card.Body>
                 <div className="d-flex justify-content-between">
                     <Card.Title>
@@ -16,7 +19,7 @@ export default function CardRestaurant() {
                     </Card.Title>
                     {/* dropdown menu edit delete */}
                     <NavDropdown
-                        title="Edit"
+                        title="Modifier"
                         id="basic-nav-dropdown"
                         align={'end'}
 
