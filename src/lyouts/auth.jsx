@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 
 export default function Auth() {
     return (
-        <div className="auth-wrapper vh-100">
+        <div>
 
 
             <Container>
