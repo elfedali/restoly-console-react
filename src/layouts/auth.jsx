@@ -8,6 +8,7 @@ export default function Auth() {
 
             <Container>
                 <Row>
+
                     <Col lg={6} className="m-auto pt-4">
                         <Outlet />
                     </Col>
