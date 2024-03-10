@@ -1,40 +1,42 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export default function RestaurantNavMenu() {
+export default function RestaurantNavMenu({ restaurant }) {
+    const restaurantId = restaurant.id;
+
     return (
-        <Nav variant='underline' className='mb-3' defaultActiveKey='/r/1' as='ul' >
-            <Nav.Item >
-                <Link className='nav-link ps-0 ' to="/r/1" >
+        <Nav variant='underline' className='mb-3' as='ul'>
+            <Nav.Item>
+                <NavLink end className='nav-link ps-0' to={`/r/${restaurantId}`}>
                     Général
-                </Link>
+                </NavLink>
             </Nav.Item>
             <Nav.Item>
-                <Link className='nav-link' to="/r/1/menu">
+                <NavLink className='nav-link' to={`/r/${restaurantId}/menu`}>
                     Menu
-                </Link>
+                </NavLink>
             </Nav.Item>
             <Nav.Item>
-                <Link className='nav-link' to="/r/1/photos">
+                <NavLink className='nav-link' to={`/r/${restaurantId}/photos`}>
                     Photos
-                </Link>
+                </NavLink>
             </Nav.Item>
             <Nav.Item>
-                <Link className='nav-link' to="/r/1/hours">
+                <NavLink className='nav-link' to={`/r/${restaurantId}/hours`}>
                     Heures d'ouverture
-                </Link>
+                </NavLink>
             </Nav.Item>
             <Nav.Item>
-                <Link className='nav-link' to="/r/1/reviews">
+                <NavLink className='nav-link' to={`/r/${restaurantId}/reviews`}>
                     Avis
-                </Link>
+                </NavLink>
             </Nav.Item>
             <Nav.Item>
-                <Link className='nav-link' to="/r/1/seo">
+                <NavLink className='nav-link' to={`/r/${restaurantId}/seo`}>
                     SEO
-                </Link>
+                </NavLink>
             </Nav.Item>
-        </Nav >
-    )
+        </Nav>
+    );
 }

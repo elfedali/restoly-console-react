@@ -8,8 +8,8 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 
 import { BrowserRouter } from "react-router-dom";
-import AuthStack from "./navigation/AuthStack";
-import AppStack from "./navigation/AppStack";
+
+import "react-toastify/dist/ReactToastify.css";
 
 // const router = createBrowserRouter([
 //   {
