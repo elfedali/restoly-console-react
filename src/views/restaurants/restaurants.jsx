@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import CardRestaurant from '../../components/card';
 import RestaurantService from '../../services/RestaurantService';
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 
 
 
 export default function Restaurants() {
-  const notify = () => toast("Wow so easy!");
+  // const notify = () => toast("Wow so easy!");
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
@@ -25,8 +25,8 @@ export default function Restaurants() {
 
   return (
     <>
-      <button onClick={notify}>Notify!</button>
-      <ToastContainer />
+      {/* <button onClick={notify}>Notify!</button>
+      <ToastContainer /> */}
       <div className='d-flex justify-content-between'>
         <h1 className='h4 mb-4'>
           <span className='me-4'>Vos restaurants</span>

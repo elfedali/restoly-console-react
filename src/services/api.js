@@ -13,3 +13,13 @@ const http = axios.create({
 });
 
 export default http;
+
+const httpJsonApi = axios.create({
+  baseURL: "http://localhost:8000",
+  headers: {
+    "X-Requested-With": "XMLHttpRequest",
+    "Content-Type": "application/vnd.api+json",
+  },
+  withCredentials: true,
+  withXSRFToken: true,
+});
