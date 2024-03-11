@@ -27,7 +27,8 @@ export default function RestaurantMenu() {
     };
 
     const handleNewMenuCategorySuccess = (newCategory) => {
-        setMenuCategories([...menuCategories, newCategory]);
+
+        setMenuCategories([newCategory.data, ...menuCategories]);
         setError(null);
     };
 

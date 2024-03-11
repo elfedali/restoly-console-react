@@ -60,6 +60,16 @@ const RestaurantService = {
       throw error;
     }
   },
+  removeMenuCategory: async (restaurantId, categoryId) => {
+    try {
+      await http.delete(
+        `/api/restaurants/${restaurantId}/menu-category/${categoryId}`
+      );
+    } catch (error) {
+      console.error("Error removing menu category:", error);
+      throw error;
+    }
+  },
 };
 
 export default RestaurantService;
